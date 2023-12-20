@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu Prototype</title>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  body {
+    font-family: 'Open Sans', sans-serif;
+    background-image: url('https://thumbs.dreamstime.com/z/fondo-de-navidad-azul-y-blanco-con-adornos-dorados-plateados-copos-nieve-sobre-blancos-261850700.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  .menu-background {
+    background-color: rgba(255, 255, 255, 0.8); /* Light theme background with opacity */
+    backdrop-filter: blur(5px);
+  }
+  .menu-item {
+    border-bottom: 1px solid #ddd;
+    padding: 8px 0;
+  }
+  .button {
+    display: inline-block;
+    margin-right: 8px;
+    margin-bottom: 8px;
+  }
+  .hidden {
+    display: none;
+  }
+</style>
+</head>
+<body class="menu-background">
+<div class="container mx-auto px-4 py-8">
+  <div class="bg-white p-6 rounded-lg shadow-lg">
+    <h1 class="text-2xl font-bold mb-4">SOPA NOXEVIEJA 2023 - PENYA L´ALBENC</h1>
+    <div>
+      <button id="menuBolissimToggle" class="button bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        Menu Bolissim
+      </button>
+      <button id="propostesToggle" class="button bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+        Propostes
+      </button>
+      <button id="menuXiquetsToggle" class="button bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+        Menu Xiquets
+      </button>
+    </div>
+    <div id="menuBolissimList" class="hidden">
+      <!-- Updated menu items based on the new list provided -->
+      <div class="menu-item">Victor Zandalinas - Bacallà gratinat i gambes amb salsa de sarsuela</div>
+      <div class="menu-item">Sonia Domingo - Bacallà gratinat i gambes amb salsa de sarsuela</div>
+      <div class="menu-item">Serafin Montoliu - Bacallà gratinat i gambes amb salsa de sarsuela</div>
+      <div class="menu-item">Susana Pitarch Miralles - Pato al cava amb muselina de pataca</div>
+      <div class="menu-item">Elena - Pato al cava amb muselina de pataca</div>
+      <div class="menu-item">Sugey Guzman - Bacallà gratinat i gambes amb salsa de sarsuela</div>
+      <div class="menu-item">Francisco Vicente Sorribes - Bacallà gratinat i gambes amb salsa de sarsuela</div>
+      <div class="menu-item">Ana - Bacallà gratinat i gambes amb salsa de sarsuela</div>
+      <div class="menu-item">Carmina Escorihuela - Pato al cava amb muselina de pataca</div>
+      <div class="menu-item">David Roig - Pato al cava amb muselina de pataca</div>
+      <div class="menu-item">Lucia Carceller Milian - Bacallà gratinat i gambes amb salsa de sarsuela</div>
+      <div class="menu-item">Miguel Angel Monfort Carceller - Bacallà gratinat i gambes amb salsa de sarsuela</div>
+      <div class="menu-item">Juanfer Marques - Bacallà gratinat i gambes amb salsa de sarsuela</div>
+      <div class="menu-item">M Pilar Gimeno - Pato al cava amb muselina de pataca</div>
+      <div class="menu-item">Raúl Altaba - Pato al cava amb muselina de pataca</div>
+      <div class="menu-item">Oscar Vicente - Bacallà gratinat i gambes amb salsa de sarsuela</div>
+      <div class="menu-item">Diego Tena i Pitarch - Pato al cava amb muselina de pataca</div>
+      <div class="menu-item">Saul Montoliu - Pato al cava amb muselina de pataca</div>
+      <div class="menu-item">Alfonso Roig - Bacallà gratinat i gambes amb salsa de sarsuela</div>
+      <div class="menu-item">Juan Ramon Barreda - Pato al cava amb muselina de pataca</div>
+      <div class="menu-item">Carol - Bacallà gratinat i gambes amb salsa de sarsuela</div>
+    </div>
+    <div id="propostesList" class="hidden">
+      <!-- Propostes list remains the same as previous -->
+      <h2 class="text-xl font-semibold mt-4 mb-2">Propostes entrants i postre</h2>
+      <div class="menu-item">Sepia del Gori</div>
+      <div class="menu-item">Tabla embutidos</div>
+      <div class="menu-item">Sepia, jamón, patés, quesos…</div>
+      <div class="menu-item">"Entrantes: jamon, queso y embutidos</div>
+      <div class="menu-item">Postre: fruta"</div>
+      <div class="menu-item">Embutidos. Ensaladas Helado</div>
+      <div class="menu-item">Tablas de queso, jamones y cecinas</div>
+      <div class="menu-item">Tabla de pates</div>
+      <div class="menu-item">Pernil, formatge, embutits</div>
+      <div class="menu-item">Postre: Helado</div>
+      <div class="menu-item">Embutidos, quesos variados y ensaladas curradas. Postre corte helado contesa</div>
+      <div class="menu-item">Gambes i pijama</div>
+      <!-- ... (additional items here) ... -->
+    </div>
+    <div id="menuXiquetsList" class="hidden">
+      <!-- Menu Xiquets list remains the same as previous -->
+      <h2 class="text-xl font-semibold mt-4 mb-2">Menu Xiquets</h2>
+      <div class="menu-item">Salchichas, nuggets y patatas fritas</div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.getElementById('menuBolissimToggle').addEventListener('click', function() {
+    toggleVisibility('menuBolissimList');
+  });
+  document.getElementById('propostesToggle').addEventListener('click', function() {
+    toggleVisibility('propostesList');
+  });
+  document.getElementById('menuXiquetsToggle').addEventListener('click', function() {
+    toggleVisibility('menuXiquetsList');
+  });
+
+  function toggleVisibility(id) {
+    var element = document.getElementById(id);
+    if (element.classList.contains('hidden')) {
+      element.classList.remove('hidden');
+    } else {
+      element.classList.add('hidden');
+    }
+  }
+</script>
+</body>
+</html>
