@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penya L'Albenc - Vilafranca</title>
+    <link href='https://fullcalendar.io/releases/fullcalendar/3.10.0/fullcalendar.min.css' rel='stylesheet' />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        #calendar {
+            max-width: 900px;
+            margin: 40px auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Penya L'Albenc - Vilafranca</h1>
+    </header>
+    <div id='calendar'></div>
+
+    <script src='https://fullcalendar.io/releases/fullcalendar/3.10.0/lib/jquery.min.js'></script>
+    <script src='https://fullcalendar.io/releases/fullcalendar/3.10.0/lib/moment.min.js'></script>
+    <script src='https://fullcalendar.io/releases/fullcalendar/3.10.0/fullcalendar.min.js'></script>
+    <script src='https://fullcalendar.io/releases/fullcalendar/3.10.0/locale/es.js'></script>
+    <script>
+        $(document).ready(function() {
+            $('#calendar').fullCalendar({
+                locale: 'es',
+                events: 'path_to_your_events.json', // Reemplaza con la ruta a tu archivo JSON
+                // Otras opciones de configuración aquí
+            });
+        });
+    </script>
+</body>
+</html>
+
