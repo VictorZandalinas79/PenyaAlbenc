@@ -40,13 +40,14 @@
     <script src='https://fullcalendar.io/releases/fullcalendar/3.10.0/fullcalendar.min.js'></script>
     <script src='https://fullcalendar.io/releases/fullcalendar/3.10.0/locale/es.js'></script>
     <script>
-        $(document).ready(function() {
-            $('#calendar').fullCalendar({
-                locale: 'es',
-                events: 'path_to_your_events.json', // Reemplaza con la ruta a tu archivo JSON
-                // Otras opciones de configuración aquí
-            });
-        });
+       $(document).ready(function() {
+    $('#calendar').fullCalendar({
+        locale: 'es',
+        events: 'https://raw.githubusercontent.com/VictorZandalinas79/PenyaAlbenc/main/path_to_your_json_file.json',
+        // Otras opciones de configuración aquí
+    });
+});
+
     </script>
 </body>
 </html>
