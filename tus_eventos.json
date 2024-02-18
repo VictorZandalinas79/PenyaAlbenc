@@ -1,11 +1,7 @@
-[
   {
-    "title": "Evento 1",
-    "start": "2024-02-23",
-    "end": "2024-02-24",
-    "color": "#FF0000", // Opcional: Color específico para este evento
-    // Otros campos opcionales como "url", "allDay", "description", etc.
-  },
-  
+    "title": "Evento de Prueba",
+    "start": "2024-03-25",
+    "end": "2024-03-26"
+  }
 ]
   
